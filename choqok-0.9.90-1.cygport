@@ -1,0 +1,5 @@
+inherit kde4
+
+DESCRIPTION="KDE micro-blogging client"
+HOMEPAGE="http://choqok.gnufolks.org/"
+SRC_URI="http://d10xg45o6p6dbl.cloudfront.net/projects/c/choqok/${PN}.${PV}.tar.bz2"
