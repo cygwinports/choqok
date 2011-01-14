@@ -1,5 +1,5 @@
 category: KDE Net
-requires: libgcc1 libkdecore5 libkwebkit1 libqjson0 libqoauth1 libQtCore4 libQtDBus4 libQtGui4 libQtWebKit4 libQtXml4 libstdc++6
+requires: libattica0 libgcc1 libkdecore5 libkwebkit1 libqjson0 libqoauth1 libQtCore4 libQtDBus4 libQtGui4 libQtWebKit4 libQtXml4 libstdc++6
 sdesc: "KDE Twitter/Identi.ca microblogging client"
 ldesc: "Choqok is a Free/Open Source micro-blogging client for KDE. It 
 currently supports Twitter.com and Identi.ca services."
