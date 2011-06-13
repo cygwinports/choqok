@@ -2,4 +2,4 @@ inherit kde4
 
 DESCRIPTION="KDE micro-blogging client"
 HOMEPAGE="http://choqok.gnufolks.org/"
-SRC_URI="http://choqok.gnufolks.org/pkgs/${P}.tar.bz2"
+SRC_URI="mirror://sourceforge/choqok/${P}.tar.bz2"
