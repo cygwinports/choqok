@@ -9,3 +9,5 @@ DESCRIPTION="Choqok is a Free/Open Source micro-blogging client for KDE. It
 currently supports Twitter.com and Identi.ca services."
 HOMEPAGE="http://choqok.gnufolks.org/"
 SRC_URI="mirror://sourceforge/choqok/choqok-${VERSION}.tar.xz"
+
+REQUIRES="kde-runtime"
