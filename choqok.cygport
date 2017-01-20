@@ -1,13 +1,48 @@
-inherit kde4
+inherit kf5
 
 NAME="choqok"
-VERSION=1.5
+VERSION=1.6.0
 RELEASE=1
 CATEGORY="Net"
 SUMMARY="KDE Twitter/Identi.ca microblogging client"
 DESCRIPTION="Choqok is a Free/Open Source micro-blogging client for KDE. It
 currently supports Twitter.com and Identi.ca services."
 HOMEPAGE="http://choqok.gnufolks.org/"
-SRC_URI="mirror://sourceforge/choqok/choqok-${VERSION}.tar.xz"
+SRC_URI="mirror://kde/stable/choqok/${VERSION%.*}/src/choqok-${VERSION}.tar.xz"
+PATCH_URI="
+	1.6-dllexport.patch
+	1.6-qoauth-qt5.patch
+"
 
-REQUIRES="kde-runtime"
+PKG_NAMES="choqok choqok-devel"
+choqok_CONTENTS="
+	etc/postinstall/choqok.sh
+	usr/bin/choqok.exe
+	usr/bin/cygchoqok-1.dll
+	usr/bin/cyggnusocialapihelper-1.dll
+	usr/bin/cygtwitterapihelper-1.dll
+	usr/lib/qt5/plugins/*choqok*
+	usr/lib/qt5/plugins/kf5/parts/konqchoqokplugin.dll
+	usr/share/applications/org.kde.choqok.desktop
+	usr/share/choqok/
+	usr/share/config.kcfg/*
+	usr/share/dbus-1/services/org.kde.choqok.service
+	usr/share/doc/HTML/*/choqok/
+	usr/share/doc/choqok/
+	usr/share/icons/hicolor/*/*/*
+	usr/share/knotifications5/choqok/
+	usr/share/kservices5/ServiceMenus/choqok*
+	usr/share/kservices5/*choqok*
+	usr/share/kservicetypes5/choqok*
+	usr/share/kxmlgui5/*choqok*
+	usr/share/locale/*/LC_MESSAGES/choqok.mo
+	usr/share/metainfo/org.kde.choqok.appdata.xml
+"
+choqok_devel_REQUIRES="libKF5Config-devel libKF5CoreAddons-devel libKF5I18n-devel libKF5Service-devel libKF5TextWidgets-devel libKF5XmlGui-devel libQt5Core-devel libQt5Gui-devel"
+choqok_devel_CONTENTS="
+	usr/include/choqok/
+	usr/lib/libchoqok.dll.a
+	usr/lib/libgnusocialapihelper.dll.a
+	usr/lib/libtwitterapihelper.dll.a
+	usr/share/cmake/modules/FindChoqok.cmake
+"
